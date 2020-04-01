@@ -1,9 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import App from './App';
+import Table from './Components/table/index';
+
+describe('<MyComponent />', () => {
+  it('renders one <Table /> component', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(Table)).to.have.lengthOf(1);
+  });
+
 });
+
+

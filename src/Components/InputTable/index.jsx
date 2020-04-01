@@ -56,6 +56,7 @@ const InputTable = ({ direction, setDirection, setX, setY, x, y }) => {
         }}
       >
         <IosArrowDropleft
+        className="arrowButtonLeft"
           fontSize="60px"
           style={{ marginRight: "auto", cursor: "pointer" }}
           onClick={() => handleTurnLeft()}
