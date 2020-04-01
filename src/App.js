@@ -56,6 +56,7 @@ const App = () => {
         </h2>
       </div>
       <Table x={x} y={y} direction={direction} />
+    
       <InputTable
         x={x}
         y={y}
